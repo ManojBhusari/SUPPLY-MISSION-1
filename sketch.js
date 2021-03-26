@@ -49,13 +49,16 @@ function draw() {
   rectMode(CENTER);
   background(0);
   package.x = packageBody.position.x 
-  package.y = packageBody.position.y 
+  package.y = packageBody.position.y
+  
+  keyPressed();
+
   drawSprites();
  
 }
 
 function keyPressed() {
- if (keyDown === DOWN_ARROW) {
+ if (keyDown("DOWN_ARROW")) {
 	//package.scale = 1; 
 	Matter.Body.setStatic(packageBody,false); 
   }
